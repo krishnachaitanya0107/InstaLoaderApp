@@ -1,12 +1,15 @@
 import instaloader
 
 
-def download(profile):
+def download(profile,custom_save_location=""):
     profile = profile.replace(" ", "")
     user = instaloader.Instaloader()
     user.save_metadata = False
     user.post_metadata_txt_pattern = ""
-    user.dirname_pattern = f"/sdcard/InstaLoaderApp/{profile}"
+    if custom_save_location=="":
+        user.dirname_pattern = f"/sdcard/InstaLoaderApp/{profile}"
+    else:
+        user.dirname_pattern = custom_save_location
     user.download_profile(profile)
 
 

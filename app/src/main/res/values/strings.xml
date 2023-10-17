@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">InstaLoaderApp</string>
+    <string name="choose_file_button_description">Choose File Button</string>
 </resources>
